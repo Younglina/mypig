@@ -1,0 +1,74 @@
+html,body{
+    margin: 0;
+    padding: 0;
+}
+audio{
+    z-index: 5;
+    position: absolute;
+    bottom: 0;
+    opacity: 0.1;
+    transition: all 2s;
+}
+audio:hover{
+    opacity: 1;
+}
+.wall{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+div#background{
+    background: url("~@/assets/preview.jpeg")no-repeat;
+    background-position: 90%;
+    animation: dd 100s linear infinite;
+    background-size: 140% 100%;
+}
+div#midground{
+    background: url("~@/assets/midground.png");
+    z-index: 1;
+    animation: cc 100s linear infinite;
+}
+div#foreground{
+    background: url("~@/assets/foreground.png");
+    z-index: 2;
+    animation: cc 153s linear infinite;
+}
+div#fore2ground{
+    transform: scale(1.5);
+    background: url("~@/assets/foreground.png");
+    z-index: 3;
+    animation: cc 70s linear infinite;
+}
+div#top{
+    background: url("~@/assets/midground.png");
+    z-index: 4;
+    animation: da 100s linear infinite;
+}
+@keyframes cc {
+    0%{
+        background-position: 0 0;
+        transform: translateY(10px);
+    }
+    100%{
+        background-position: 600% 0;
+    }
+}
+
+@keyframes da {
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: 0 600%;
+    }
+}
+@-webkit-keyframes da {
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: 0 600%;
+    }
+}
