@@ -70,8 +70,11 @@ export default {
         "https://cdn.jsdelivr.net/gh/QiShaoXuan/live2DModel@1.0.0/live2d-widget-model-hijiki/assets/hijiki.model.json",
       whiteCat:
         "https://cdn.jsdelivr.net/gh/QiShaoXuan/live2DModel@1.0.0/live2d-widget-model-tororo/assets/tororo.model.json",
-      // https://cdn.jsdelivr.net/gh/tomiaa12/kuangyx.cn-public/live2d/dollsfrontline/kp31_310/normal/model.json
-      // https://cdn.jsdelivr.net/gh/tomiaa12/kuangyx.cn-public/live2d/dollsfrontline/welrod_1401/normal/model.json
+      kp31: "https://cdn.jsdelivr.net/gh/tomiaa12/kuangyx.cn-public/live2d/dollsfrontline/kp31_310/normal/model.json",
+      welrod: "https://cdn.jsdelivr.net/gh/tomiaa12/kuangyx.cn-public/live2d/dollsfrontline/welrod_1401/normal/model.json",
+      violet: "https://cdn.jsdelivr.net/gh/tomiaa12/kuangyx.cn-public/live2d/Violet/14.json",
+      model22: 'https://cdn.jsdelivr.net/gh/tomiaa12/kuangyx.cn-public/live2d/22/model.default.json',
+      model33: 'https://cdn.jsdelivr.net/gh/tomiaa12/kuangyx.cn-public/live2d/33/model.default.json',
       // https://cdn.jsdelivr.net/gh/tomiaa12/kuangyx.cn-public/live2d/dollsfrontline/hk416_805/normal/model.json
       // https://cdn.jsdelivr.net/gh/tomiaa12/kuangyx.cn-public/live2d/rem/model.json
       // https://cdn.jsdelivr.net/gh/tomiaa12/kuangyx.cn-public/live2d/dollsfrontline/95type_405/normal/model.json
@@ -90,18 +93,17 @@ export default {
       const app = new PIXI.Application({
         view: document.getElementById('canvas'),
         autoStart: true,
-        width: 120,
-        height: 150,
+        width: 180,
+        height: 280,
         resolution: 1,
         transparent: true
       });
       // https://github.com/QiShaoXuan/live2DModel
-      const model = await Live2DModel.from(this.blackCat);
-      // app.renderer.backgroundColor = 0xffffff;
+      const model = await Live2DModel.from(this.violet);
       app.renderer.autoResize = true;
-      model.x = -1
-      model.y = -20
-      model.scale.set(0.08, 0.08);
+      model.x = 0
+      model.y = 0
+      model.scale.set(0.06, 0.06);
       app.stage.addChild(model);
       // model.anchor.set(0.5, 0.5);
       // 交互
